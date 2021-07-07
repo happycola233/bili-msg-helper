@@ -307,7 +307,7 @@ try:
                     if 消息列表数据.get("data").get("session_list") != None: # 如果有新消息
                         for i in range(len(消息列表数据.get("data").get("session_list"))):
                             tallker_id = str(消息列表数据.get("data").get("session_list")[i].get("talker_id")) # 获取消息发送者UID
-                            私信聊天数据 = eval(requests.get("https://api.vc.bilibili.com/svr_sync/v1/svr_sync/fetch_session_msgs?talker_id=" + tallker_id + "&session_type=1&size=20&build=0&mobi_app=web,",headers=headers,verify=False).text) # 获取私信聊天记录
+                            私信聊天数据 = eval(requests.get("https://api.vc.bilibili.com/svr_sync/v1/svr_sync/fetch_session_msgs?talker_id=" + tallker_id + "&session_type=1&size=20&build=0&mobi_app=web",headers=headers,verify=False).text) # 获取私信聊天记录
                             # 获取“消息列表数据”和“私信聊天数据”后，获取当前时间戳，作为临时暂存变量，传递给新一轮的“时间戳_短”和“时间戳_长”
                             临时时间戳_短 = eval(requests.get("http://api.bilibili.com/x/report/click/now",headers=headers,verify=False).text).get("data").get("now")
                             临时时间戳_长 = str(int(time.time() * 1000000)) # 获取当前时间戳，去除小数点
