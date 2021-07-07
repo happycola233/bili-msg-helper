@@ -369,7 +369,7 @@ try:
                                                 elif eval(私信聊天数据.get("data").get("messages")[num].get("content")).get("source") == 16: # 番剧/纪录片
                                                     content = "分享了" + str(eval(私信聊天数据.get("data").get("messages")[num].get("content")).get("source_desc","[未知]")) + " ep" + str(eval(私信聊天数据.get("data").get("messages")[num].get("content")).get("id","[未知]")) + "：" + str(eval(私信聊天数据.get("data").get("messages")[num].get("content")).get("title","[未知]"))# 获取消息
                                                 else:
-                                                    content = "分享了[未知内容]"
+                                                    content = "分享了[未知]"
                                                 已输出的消息.append(私信聊天数据.get("data").get("messages")[num].get("msg_key"))
                                                 消息时间戳 = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(私信聊天数据.get("data").get("messages")[num].get("timestamp")))
                                                 w.ShowWindow(sender_name + "（UID" + sender_uid + "）",content)
@@ -414,7 +414,7 @@ try:
 
 
                                             else:
-                                                content = "未知类型"
+                                                content = "[不支持的消息类型]"
                                                 已输出的消息.append(私信聊天数据.get("data").get("messages")[num].get("msg_key"))
                                                 消息时间戳 = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(私信聊天数据.get("data").get("messages")[num].get("timestamp")))
                                                 w.ShowWindow(sender_name + "（UID" + sender_uid + "）",content)
