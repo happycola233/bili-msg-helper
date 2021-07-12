@@ -111,7 +111,7 @@ try:
         win32gui.ShowWindow(hwnd,win32con.SW_SHOW)
         win32gui.MoveWindow(hwnd,0,0,100,100,True)
         time.sleep(0.01)
-        #1、移动鼠标test索框，单击，输入要搜索的名字
+        #1、移动鼠标至搜索框，单击，输入要搜索的名字
         movePos(100,130)
         click()
         setText(name)
