@@ -339,7 +339,7 @@ try:
 
 
                                             elif 私信聊天数据.get("data").get("messages")[num].get("msg_type") == 2: # 图片
-                                                content = "[图片] " + str(eval(私信聊天数据.get("data").get("messages")[num].get("content")).get("url","[未知]")) # 获取消息
+                                                content = "[图片] " + str(eval(私信聊天数据.get("data").get("messages")[num].get("content")).get("url","[未知]")).replace("\\/","/") # 获取消息
                                                 已输出的消息.append(私信聊天数据.get("data").get("messages")[num].get("msg_key"))
                                                 消息时间戳 = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(私信聊天数据.get("data").get("messages")[num].get("timestamp")))
                                                 w.ShowWindow(sender_name + "（UID" + sender_uid + "）",content)
@@ -421,8 +421,9 @@ try:
 
 
                                             print(("[" + 消息时间戳 + "] " + sender_name + "（UID" + sender_uid + "）：" + content).encode('gbk', 'replace').decode('gbk')) # 将无法解码的字符转换为“?”
+
                                             if Chanify_启用 == "是":
-                                                requests.post("https://api.chanify.net/v1/sender/" + Chanify_token,data={'title':sender_name + "（UID" + sender_uid + "）",'text':content,'sound':1},verify=False).text
+                                                requests.post("https://api.chanify.net/v1/sender/" + Chanify_token,data={'title':sender_name + "（UID" + sender_uid + "）",'text':content,'sound':1},verify=False).text                                        
                                             if QQ_启用 == "是":
                                                 QQmsgsend(QQ_name,(sender_name + "（UID" + sender_uid + "）：" + content).encode('gbk', 'replace').decode('gbk'))
 
