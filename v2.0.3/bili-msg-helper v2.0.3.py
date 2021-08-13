@@ -118,7 +118,7 @@ try:
         #获取QQ主界面窗口句柄
         hwnd = win32gui.FindWindow("TXGuiFoundation", "QQ")
         if hwnd == 0:
-            print("QQ未运行，无法找到QQ主窗口句柄！")
+            print("[错误] QQ未运行，无法找到QQ主窗口句柄！")
             return
 
         win32gui.ShowWindow(hwnd,win32con.SW_SHOW)
