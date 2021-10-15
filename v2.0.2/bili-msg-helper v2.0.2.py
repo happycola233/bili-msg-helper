@@ -461,7 +461,7 @@ except:
     print()
     print('''\
 您可以：
-1、将以上错误信息通过B站私信到：开心的肥宅快乐水（https://space.bilibili.com/324042405）或wuziqian211（https://space.bilibili.com/425503913）
+1、将以上错误信息通过B站私信到：肥宅水水呀（https://space.bilibili.com/324042405）或wuziqian211（https://space.bilibili.com/425503913）
 或
 2、在https://gitee.com/happycola/bili-msg-helper/issues中新建提交问题，并附上以上错误信息
 
