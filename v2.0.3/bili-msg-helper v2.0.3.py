@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # 哔哩哔哩自动完成任务 V2.0.3
 # 本程序可以实时获取B站私信新消息，并向您发送通知。
-# 作者：两位B站用户：开心的肥宅快乐水（https://space.bilibili.com/324042405）  编写代码主体
+# 作者：两位B站用户：肥宅水水呀（https://space.bilibili.com/324042405）  编写代码主体
 #                    wuziqian211（https://space.bilibili.com/425503913）       修改错误、完善代码
 
 import requests
